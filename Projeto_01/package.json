@@ -1,0 +1,15 @@
+{
+  "name": "projeto_01",
+  "version": "1.0.0",
+  "description": "Projeto 1 do curço de node",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Mauricio Sarpa",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1"
+  }
+}
