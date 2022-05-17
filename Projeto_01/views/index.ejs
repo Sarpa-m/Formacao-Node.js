@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto 01</title>
-  </head>
-
-  <body>
-    <h1>projeto 01</h1>
+<%- include('partials/header') %>
+<body>
+  <%- include('partials/navbar') %>
+  <div class="container">
+    <h1>Perguntas</h1>
     <hr />
-    <%= nome %> <%= lang %> <br />
-    <% if(msg) { %>
-    <h3>erro</h3>
-    <% } else { %>
-    <h3> sem erro</h3>
+    <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+    <div class="container">
+      <% perguntas.forEach(pergunta => { %>
 
-    <% } %>
+      <div class="card mt-3">
+        <div class="card-body">
+          <h3><%= pergunta.titulo %></h3>
+        </div>
+        <div class="card-footer">
+          <a href="pergunta/<%= pergunta.id %>" class="btn btn-primary">Responder</a
+          >
+        </div>
+      </div>
 
-    
-     
-  </body>
-</html>
+      <% }) %>
+    </div>
+  </div>
+</body>
+<%- include('partials/footer') %>
